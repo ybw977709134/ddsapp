@@ -1,0 +1,412 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/title_rellay"
+        android:layout_width="fill_parent"
+        android:layout_height="45dp"
+        android:background="@color/white" >
+
+        <ImageButton
+            android:id="@+id/back_btn"
+            android:layout_width="60dp"
+            android:layout_height="45dp"
+            android:background="@color/white"
+            android:onClick="leftClicked"
+            android:src="@drawable/back_arrow" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="事务详情"
+            android:textColor="@color/text_gray"
+            android:textSize="@dimen/text_size_normal2" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:overScrollMode="never"
+        android:scrollbars="none" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:background="#f5f5f5" >
+
+                <ImageView
+                    android:id="@+id/affair_detail_image"
+                    android:layout_width="120dp"
+                    android:layout_height="160dp"
+                    android:layout_marginBottom="20dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/user_default_bg"
+                    android:scaleType="centerCrop" />
+
+                <TextView
+                    android:id="@+id/affair_detail_name"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/affair_detail_image"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="30dp"
+                    android:layout_toRightOf="@+id/affair_detail_image"
+                    android:textColor="@color/text_gray"
+                    android:textSize="@dimen/text_size_large" />
+
+                <TextView
+                    android:id="@+id/affair_detail_code"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/affair_detail_name"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="30dp"
+                    android:layout_toRightOf="@+id/affair_detail_image"
+                    android:textColor="@color/text_gray"
+                    android:textSize="@dimen/text_size_normal" />
+
+                <TextView
+                    android:id="@+id/affair_name_info_btn"
+                    android:layout_width="100dp"
+                    android:layout_height="40dp"
+                    android:layout_below="@+id/affair_detail_code"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_toRightOf="@+id/affair_detail_image"
+                    android:background="@drawable/login_btn_bg"
+                    android:gravity="center"
+                    android:text="查看详情"
+                    android:textColor="@color/text_blue" />
+
+                <TextView
+                    android:id="@+id/affair_submit_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/affair_detail_image"
+                    android:layout_marginLeft="15dp"
+                    android:layout_toRightOf="@+id/affair_detail_image"
+                    android:textColor="@color/line_color" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/affair_organization_rellay"
+                android:layout_width="fill_parent"
+                android:layout_height="55dp" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="20dp"
+                    android:text="发布单位"
+                    android:textColor="@color/text_gray" />
+
+                <TextView
+                    android:id="@+id/affair_organization_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:textColor="@color/text_blue" />
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="0.8dp"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/line_color" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="55dp" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="20dp"
+                    android:text="事务有效日期"
+                    android:textColor="@color/text_gray" />
+
+                <TextView
+                    android:id="@+id/affair_effective_date_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:textColor="@color/text_gray" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="20dp"
+                android:background="#f5f5f5" />
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="55dp" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="20dp"
+                    android:text="证照规格"
+                    android:textColor="@color/text_gray" />
+
+                <TextView
+                    android:id="@+id/affair_detail_photo_format"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:textColor="@color/text_blue" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/affair_detail_previlidge_linlay"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="visible" >
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="55dp"
+                    android:background="#f5f5f5" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="20dp"
+                        android:text="像素尺寸"
+                        android:textColor="@color/text_gray" />
+
+                    <TextView
+                        android:id="@+id/affair_size_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:textColor="@color/text_gray" />
+
+                    <View
+                        android:layout_width="fill_parent"
+                        android:layout_height="0.8dp"
+                        android:layout_alignParentBottom="true"
+                        android:background="@color/line_color" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="55dp"
+                    android:background="#f5f5f5" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="20dp"
+                        android:text="背景颜色"
+                        android:textColor="@color/text_gray" />
+
+                    <TextView
+                        android:id="@+id/affair_background_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:textColor="@color/text_gray" />
+
+                    <View
+                        android:layout_width="fill_parent"
+                        android:layout_height="0.8dp"
+                        android:layout_alignParentBottom="true"
+                        android:background="@color/line_color" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="55dp"
+                    android:background="#f5f5f5" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="20dp"
+                        android:text="比对分值要求"
+                        android:textColor="@color/text_gray" />
+
+                    <TextView
+                        android:id="@+id/affair_score_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:textColor="@color/text_gray" />
+
+                    <View
+                        android:layout_width="fill_parent"
+                        android:layout_height="0.8dp"
+                        android:layout_alignParentBottom="true"
+                        android:background="@color/line_color" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="55dp"
+                    android:background="#f5f5f5" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="20dp"
+                        android:text="分辨率"
+                        android:textColor="@color/text_gray" />
+
+                    <TextView
+                        android:id="@+id/affair_screendpi_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:textColor="@color/text_gray" />
+
+                    <View
+                        android:layout_width="fill_parent"
+                        android:layout_height="0.8dp"
+                        android:layout_alignParentBottom="true"
+                        android:background="@color/line_color" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="55dp"
+                    android:background="#f5f5f5" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="20dp"
+                        android:text="文件大小"
+                        android:textColor="@color/text_gray" />
+
+                    <TextView
+                        android:id="@+id/affair_file_size_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:textColor="@color/text_gray" />
+
+                    <View
+                        android:layout_width="fill_parent"
+                        android:layout_height="0.8dp"
+                        android:layout_alignParentBottom="true"
+                        android:background="@color/line_color" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="55dp"
+                    android:background="#f5f5f5" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="20dp"
+                        android:text="办理费用"
+                        android:textColor="@color/text_gray" />
+
+                    <TextView
+                        android:id="@+id/affair_price_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:textColor="@color/text_gray" />
+
+                    <View
+                        android:layout_width="fill_parent"
+                        android:layout_height="0.8dp"
+                        android:layout_alignParentBottom="true"
+                        android:background="@color/line_color" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp" >
+
+                <ImageView
+                    android:id="@+id/take_pic_method1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:src="@drawable/take_pic_method1_bg" />
+
+                <ImageView
+                    android:id="@+id/take_pic_method2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:src="@drawable/take_pic_method2_bg" />
+
+                <ImageView
+                    android:id="@+id/take_pic_method3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="30dp"
+                    android:src="@drawable/take_pic_method3_bg" />
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="30dp"
+                android:layout_marginTop="80dp"
+                android:gravity="center_horizontal"
+                android:lineSpacingExtra="2dp"
+                android:text="手机拍摄更加快捷，\n网点拍摄能给您更加优质的照片。"
+                android:textColor="@color/line_color" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

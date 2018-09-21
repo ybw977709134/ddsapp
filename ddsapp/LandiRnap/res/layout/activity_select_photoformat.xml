@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="45dp"
+        android:background="@color/white" >
+
+        <ImageButton
+            android:id="@+id/back_btn"
+            android:layout_width="60dp"
+            android:layout_height="45dp"
+            android:background="@color/white"
+            android:onClick="leftClicked"
+            android:src="@drawable/back_arrow" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="证照规格"
+            android:textColor="@color/text_gray"
+            android:textSize="@dimen/text_size_normal2" />
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="0.8dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/line_color" />
+    </RelativeLayout>
+
+    <com.edonesoft.views.HorizontalListView
+        android:id="@+id/select_photoformat_type_list"
+        android:layout_width="fill_parent"
+        android:layout_height="46dp"
+        android:background="@color/white"
+        android:scrollbars="none" >
+    </com.edonesoft.views.HorizontalListView>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="0.8dp"
+        android:background="#ececec" />
+
+    <GridView
+        android:id="@+id/select_photoformat_gridview"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:listSelector="@color/transparent"
+        android:numColumns="2" >
+    </GridView>
+
+</LinearLayout>

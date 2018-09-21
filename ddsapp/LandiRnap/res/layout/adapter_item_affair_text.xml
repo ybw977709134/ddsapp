@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/affair_detail_name"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:ellipsize="end"
+        android:gravity="center_vertical"
+        android:paddingLeft="25dp"
+        android:paddingRight="20dp"
+        android:singleLine="true"
+        android:textColor="#afb3b4" />
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="0.7dp"
+        android:background="#ececec" />
+
+</LinearLayout>

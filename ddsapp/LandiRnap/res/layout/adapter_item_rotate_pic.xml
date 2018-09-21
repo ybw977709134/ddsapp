@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="15dp"
+    android:layout_height="30dp"
+    android:orientation="vertical" >
+
+    <View
+        android:id="@+id/rotate_pic_adapter_item_line"
+        android:layout_width="0.8dp"
+        android:layout_height="7dp"
+        android:layout_gravity="center_horizontal"
+        android:background="@color/white" />
+
+    <TextView
+        android:id="@+id/rotate_pic_adapter_item_text"
+        android:layout_width="15dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="3dp"
+        android:gravity="center_horizontal"
+        android:textColor="@color/white"
+        android:textSize="7sp" />
+
+</LinearLayout>

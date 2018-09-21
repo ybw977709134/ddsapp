@@ -1,0 +1,14 @@
+<resources>
+
+    <dimen name="page_topbar_height">45dp</dimen>
+
+    <!-- System font size -->
+    <dimen name="text_size_giant2">50sp</dimen>
+    <dimen name="text_size_giant1">33sp</dimen>
+    <dimen name="text_size_giant">20sp</dimen>
+    <dimen name="text_size_large">17sp</dimen>
+    <dimen name="text_size_normal">14sp</dimen>
+    <dimen name="text_size_normal2">15sp</dimen>
+    <dimen name="text_size_small">12sp</dimen>
+
+</resources>

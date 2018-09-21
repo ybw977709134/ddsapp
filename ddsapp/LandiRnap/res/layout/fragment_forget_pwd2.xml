@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white" >
+
+    <EditText
+        android:id="@+id/forget_pwd_phone_number"
+        android:layout_width="fill_parent"
+        android:layout_height="55dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/login_edittext_bg"
+        android:hint="手机号"
+        android:inputType="text"
+        android:textColor="@color/text_gray"
+        android:textColorHint="#d1d6d8"
+        android:textSize="@dimen/text_size_normal2" />
+
+    <EditText
+        android:id="@+id/forget_pwd_vercode"
+        android:layout_width="fill_parent"
+        android:layout_height="55dp"
+        android:layout_below="@+id/forget_pwd_phone_number"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/login_edittext_bg"
+        android:hint="验证码"
+        android:inputType="text"
+        android:textColor="@color/text_gray"
+        android:textColorHint="#d1d6d8"
+        android:textSize="@dimen/text_size_normal2" />
+
+    <RelativeLayout
+        android:id="@+id/forget_pwd_send_vercode_rellay"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/forget_pwd_vercode"
+        android:layout_marginTop="20dp" >
+
+        <TextView
+            android:id="@+id/forget_pwd_send_vercode"
+            android:layout_width="130dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="20dp"
+            android:background="@drawable/login_btn_bg"
+            android:gravity="center"
+            android:text="重新获取验证码"
+            android:textColor="@color/text_blue"
+            android:textSize="@dimen/text_size_normal" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:layout_toRightOf="@+id/forget_pwd_send_vercode"
+            android:text="点击左侧按钮重新获取验证码"
+            android:textColor="#d1d6d8"
+            android:textSize="@dimen/text_size_small" />
+
+        <RelativeLayout
+            android:id="@+id/forget_pwd_countdown_rellay"
+            android:layout_width="38dp"
+            android:layout_height="38dp"
+            android:layout_alignRight="@+id/forget_pwd_send_vercode"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="9dp"
+            android:visibility="visible" >
+
+            <TextView
+                android:id="@+id/forget_pwd_countdown"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:textColor="@color/text_blue" />
+
+            <ProgressBar
+                android:id="@+id/vercode_progressbar"
+                android:layout_width="38dp"
+                android:layout_height="38dp"
+                android:layout_centerInParent="true"
+                android:layout_marginRight="10dp"
+                android:indeterminateDrawable="@drawable/vercode_progressbar_bg" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/forget_pwd_next"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/forget_pwd_send_vercode_rellay"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/login_btn_bg"
+        android:gravity="center"
+        android:text="下一步"
+        android:textColor="@color/text_blue" />
+
+</RelativeLayout>

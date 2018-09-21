@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/title_rellay"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/page_topbar_height" >
+
+        <ImageButton
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_marginLeft="10dp"
+            android:background="@color/white"
+            android:onClick="leftClicked"
+            android:scaleType="centerInside"
+            android:src="@drawable/back_arrow"
+            android:visibility="gone" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="选择服务"
+            android:textColor="@color/text_gray"
+            android:textSize="@dimen/text_size_normal2" />
+
+        <TextView
+            android:id="@+id/back_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:layout_alignParentRight="true"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="首页"
+            android:textColor="@color/text_gray"
+            android:textSize="@dimen/text_size_normal2" />
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="40dp"
+        android:background="#f5f5f5"
+        android:gravity="center_vertical"
+        android:paddingLeft="20dp"
+        android:text="服务信息"
+        android:textColor="@color/text_gray" />
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="110dp" >
+
+        <ImageView
+            android:id="@+id/commit_order_image"
+            android:layout_width="65dp"
+            android:layout_height="90dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp" />
+
+        <TextView
+            android:id="@+id/commit_order_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="15dp"
+            android:layout_toRightOf="@+id/commit_order_image"
+            android:textColor="@color/text_gray" />
+
+        <TextView
+            android:id="@+id/commit_order_file_size"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/commit_order_image"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/commit_order_image"
+            android:textColor="@color/text_gray" />
+
+        <TextView
+            android:id="@+id/commit_order_photo_format"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/commit_order_file_size"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/commit_order_image"
+            android:textColor="@color/text_gray" />
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="40dp"
+        android:background="#f5f5f5"
+        android:gravity="center_vertical"
+        android:paddingLeft="20dp"
+        android:text="结算信息"
+        android:textColor="@color/text_gray" />
+
+    <RelativeLayout
+        android:id="@+id/commit_order_price1_rellay"
+        android:layout_width="fill_parent"
+        android:layout_height="55dp"
+        android:visibility="gone" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:text="相片核验"
+            android:textColor="@color/text_gray" />
+
+        <TextView
+            android:id="@+id/commit_order_service1_last_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="20dp"
+            android:text="￥5"
+            android:textColor="@color/text_gray"
+            android:textSize="@dimen/text_size_small" />
+
+        <TextView
+            android:id="@+id/commit_order_service1_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="50dp"
+            android:text="￥0"
+            android:textColor="@color/text_gray"
+            android:textSize="@dimen/text_size_normal2" />
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="0.8dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/line_color" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/commit_order_price2_rellay"
+        android:layout_width="fill_parent"
+        android:layout_height="55dp"
+        android:visibility="gone" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:text="制作处理"
+            android:textColor="@color/text_gray" />
+
+        <TextView
+            android:id="@+id/commit_order_service2_last_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="20dp"
+            android:text="￥20"
+            android:textColor="@color/text_gray"
+            android:textSize="@dimen/text_size_small" />
+
+        <TextView
+            android:id="@+id/commit_order_service2_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="50dp"
+            android:text="￥0"
+            android:textColor="@color/text_gray"
+            android:textSize="@dimen/text_size_normal2" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="55dp"
+        android:background="#f5f5f5" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:text="合计"
+            android:textColor="@color/text_gray" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="20dp"
+            android:text="￥0"
+            android:textColor="@color/text_blue" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/commit_btn"
+        android:layout_width="fill_parent"
+        android:layout_height="55dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="100dp"
+        android:background="@drawable/login_btn_bg"
+        android:gravity="center"
+        android:text="提交"
+        android:textColor="@color/text_blue"
+        android:textSize="@dimen/text_size_normal2" />
+
+</LinearLayout>

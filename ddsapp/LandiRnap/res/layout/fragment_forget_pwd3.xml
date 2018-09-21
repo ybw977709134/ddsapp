@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white" >
+
+    <EditText
+        android:id="@+id/forget_pwd_newpwd"
+        android:layout_width="fill_parent"
+        android:layout_height="55dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/login_edittext_bg"
+        android:hint="新密码 6-20个大小写英文字母或数字"
+        android:inputType="textPassword"
+        android:textColor="@color/text_gray"
+        android:textColorHint="#d1d6d8"
+        android:textSize="@dimen/text_size_normal" />
+
+    <EditText
+        android:id="@+id/forget_pwd_repwd"
+        android:layout_width="fill_parent"
+        android:layout_height="55dp"
+        android:layout_below="@+id/forget_pwd_newpwd"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/login_edittext_bg"
+        android:hint="确认新密码 请再次输入密码"
+        android:inputType="textPassword"
+        android:textColor="@color/text_gray"
+        android:textColorHint="#d1d6d8"
+        android:textSize="@dimen/text_size_normal" />
+
+    <TextView
+        android:id="@+id/forget_pwd_commit"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/forget_pwd_repwd"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/login_btn_bg"
+        android:gravity="center"
+        android:text="完成"
+        android:textColor="@color/text_blue" />
+
+</RelativeLayout>

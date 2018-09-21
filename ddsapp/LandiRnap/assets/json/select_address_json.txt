@@ -1,0 +1,4 @@
+[{"type":1,"text":"M","number":"","sectionPosition":0,"listPosition":0}
+,{"type":0,"text":"美国","number":"+32","sectionPosition":0,"listPosition":1}
+,{"type":1,"text":"Z","number":"","sectionPosition":1,"listPosition":2}
+,{"type":0,"text":"中国","number":"+86","sectionPosition":1,"listPosition":3}]

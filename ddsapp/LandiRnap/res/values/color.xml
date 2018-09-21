@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="transparent_half">#50000000</color>
+    <color name="transparent">#00000000</color>
+    <color name="white">#ffffffff</color>
+    <color name="black">#000000</color>
+    <color name="gray">#f5f5f5</color>
+    <color name="text_blue">#598eea</color>
+    <color name="text_gray">#7d7e80</color>
+    <color name="line_color">#c8ced1</color>
+    <color name="login_btn_bg">#7eb7d7</color>
+    <color name="green">#a2cb51</color>
+    <color name="red">#fc5c5e</color>
+    <color name="orange">#fd9460</color>
+
+</resources>

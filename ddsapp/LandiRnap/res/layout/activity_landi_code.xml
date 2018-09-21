@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white" >
+
+    <RelativeLayout
+        android:id="@+id/title_rellay"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/page_topbar_height" >
+
+        <ImageButton
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_marginLeft="10dp"
+            android:background="@color/white"
+            android:onClick="leftClicked"
+            android:src="@drawable/back_arrow" />
+
+        <ImageView
+            android:id="@+id/check_qrcode"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="17dp"
+            android:src="@drawable/landi_code_qrcode" />
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="0.6dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/line_color" />
+    </RelativeLayout>
+
+    <EditText
+        android:id="@+id/landi_code_edittext"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="190dp"
+        android:background="@drawable/login_edittext_bg"
+        android:drawableLeft="@drawable/landi_code_icon"
+        android:drawablePadding="10dp"
+        android:hint="输入蓝证码"
+        android:inputType="text"
+        android:textColor="@color/text_gray"
+        android:textColorHint="#d1d6d8"
+        android:textSize="@dimen/text_size_normal" />
+
+    <TextView
+        android:id="@+id/landi_code_okbtn"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/landi_code_edittext"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/login_btn_bg"
+        android:gravity="center"
+        android:text="确定"
+        android:textColor="@color/text_blue"
+        android:textSize="@dimen/text_size_normal2" />
+
+</RelativeLayout>

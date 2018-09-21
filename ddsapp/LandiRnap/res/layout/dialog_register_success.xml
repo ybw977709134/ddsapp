@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="280dp"
+    android:layout_height="280dp"
+    android:background="@drawable/dialog_white_bg" >
+
+    <ImageView
+        android:id="@+id/success_img"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:src="@drawable/success_img" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/success_img"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:text="注册成功!"
+        android:textColor="@color/text_gray"
+        android:textSize="@dimen/text_size_giant" />
+
+    <TextView
+        android:id="@+id/dialog_register_success_profile"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:layout_above="@+id/dialog_register_success_back"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/login_btn_bg"
+        android:gravity="center"
+        android:text="完善个人资料"
+        android:textColor="@color/text_blue"
+        android:textSize="@dimen/text_size_large" />
+
+    <TextView
+        android:id="@+id/dialog_register_success_back"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/login_btn_bg"
+        android:gravity="center"
+        android:text="返回首页"
+        android:textColor="@color/text_blue"
+        android:textSize="@dimen/text_size_large" />
+
+</RelativeLayout>

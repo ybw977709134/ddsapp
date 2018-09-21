@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="100dp"
+    android:paddingBottom="15dp" >
+
+    <TextView
+        android:id="@+id/new_work_title"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="15dp"
+        android:ellipsize="end"
+        android:singleLine="true"
+        android:textColor="@color/text_gray" />
+
+    <TextView
+        android:id="@+id/new_work_organization"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/new_work_title"
+        android:layout_below="@+id/new_work_title"
+        android:layout_marginTop="5dp"
+        android:textColor="@color/text_gray"
+        android:textSize="@dimen/text_size_small" />
+
+    <TextView
+        android:id="@+id/new_work_eyes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/new_work_title"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="30dp"
+        android:drawableLeft="@drawable/new_work_eyes"
+        android:drawablePadding="5dp"
+        android:textColor="@color/text_gray"
+        android:textSize="@dimen/text_size_small" />
+
+</RelativeLayout>

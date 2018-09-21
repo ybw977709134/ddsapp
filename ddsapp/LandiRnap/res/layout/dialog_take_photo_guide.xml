@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/dialog_parent"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/dialog_white_bg"
+    android:orientation="vertical" >
+
+    <ImageView
+        android:id="@+id/guide_animation_imageview"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:scaleType="centerCrop" />
+
+    <LinearLayout
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/guide_animation_info"
+        android:layout_centerHorizontal="true"
+        android:orientation="horizontal"
+        android:weightSum="4" >
+
+        <ImageView
+            android:id="@+id/guide_animation_mark1"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:src="@drawable/guide_animation1_mark_bg" />
+
+        <ImageView
+            android:id="@+id/guide_animation_mark2"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:src="@drawable/guide_animation2_mark_bg" />
+
+        <ImageView
+            android:id="@+id/guide_animation_mark3"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:src="@drawable/guide_animation3_mark_bg" />
+
+        <ImageView
+            android:id="@+id/guide_animation_mark4"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:src="@drawable/guide_animation4_mark_bg" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/guide_animation_info"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/guide_animation_nextbtn"
+        android:layout_marginBottom="17dp"
+        android:gravity="center"
+        android:text="请在充足的光线下，照一面\n白色的背景墙，避免背光"
+        android:textColor="@color/text_gray"
+        android:textSize="@dimen/text_size_large" />
+
+    <TextView
+        android:id="@+id/guide_animation_nextbtn"
+        android:layout_width="fill_parent"
+        android:layout_height="55dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="17dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:background="@drawable/login_btn_bg"
+        android:gravity="center"
+        android:text="下一步"
+        android:textColor="@color/text_blue"
+        android:textSize="@dimen/text_size_normal2" />
+
+</RelativeLayout>

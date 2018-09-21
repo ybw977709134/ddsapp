@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <RelativeLayout
+        android:id="@+id/title_rellay"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/page_topbar_height"
+        android:background="@color/white" >
+
+        <ImageButton
+            android:id="@+id/take_picture_flashlight"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_marginLeft="10dp"
+            android:background="@color/transparent"
+            android:src="@drawable/take_pic_camera_off" />
+
+        <ImageButton
+            android:id="@+id/take_picture_reverse"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:background="@color/transparent"
+            android:src="@drawable/take_picture_reverse" />
+    </RelativeLayout>
+
+    <SurfaceView
+        android:id="@+id/take_picture_surfaceview"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/title_rellay" />
+
+    <com.edonesoft.views.FocusView
+        android:id="@+id/take_picture_focusview"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_alignBottom="@+id/take_picture_surfaceview"
+        android:layout_alignTop="@+id/take_picture_surfaceview" />
+
+    <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:src="@drawable/take_pic_grid_line" />
+
+    <RelativeLayout
+        android:id="@+id/take_picture_controller_rellay"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white"
+        android:paddingBottom="20dp"
+        android:paddingTop="20dp" >
+
+        <ImageView
+            android:id="@+id/take_picture_okbtn"
+            android:layout_width="63dp"
+            android:layout_height="63dp"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/take_picture_okbtn" />
+
+        <ImageButton
+            android:id="@+id/take_picture_backbtn"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:background="@color/transparent"
+            android:onClick="leftClicked"
+            android:src="@drawable/take_picture_backbtn" />
+    </RelativeLayout>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/take_picture_surfaceview"
+        android:layout_alignTop="@+id/take_picture_surfaceview"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="130dp"
+        android:layout_marginTop="100dp"
+        android:src="@drawable/take_pic_grid_bg" />
+
+</RelativeLayout>
